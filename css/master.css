@@ -1,0 +1,152 @@
+/* 12 Columns*/
+/* Start variabels */
+:root{
+    --main-color: #19c8fa;
+}
+/* End variabels */
+/* Start Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+ul{
+    list-style: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/* Medium */
+
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+/* Large */
+
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+/* Start Header */
+.header{
+    position: absolute;
+    left: 0;
+    width: 100%;  /* I didn't understand this property and its effects */
+    z-index: 2;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 77px;
+}
+.header .container::before{
+    content: '';
+    position: absolute;
+    background-color: #a3a3a3;
+    height: 1px;
+    width: calc(100% - 30px);
+    bottom: 0;
+    left: 15px;
+}
+.header .logo {
+    color: white;
+}
+.header nav{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header i.menu{
+    color: white;
+    font-size: 20px;
+}
+@media (min-width: 768px){
+    .header i.menu{
+        display: none;
+    }
+}
+.header ul{
+    display: flex;
+}
+@media (max-width: 767px){
+    .header ul{
+        display: none;
+    }
+    .header .menu:hover + ul {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+    .header .menu + ul a{
+        padding: 15px;
+    }
+}
+.header ul a{
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    display: block;
+    padding: 30px 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.header ul a:hover,
+.header ul a:hover.home{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.header nav .form{
+    height: 30px;
+    width: 40px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+.header .form i{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0 , -50%);
+
+}
+
+/* End Header */
