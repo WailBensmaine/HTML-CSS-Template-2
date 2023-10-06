@@ -3,7 +3,7 @@
 :root{
     --main-color: #19c8fa;
     --transparent-color: rgb(15 116 143/70%);
-    --section-padding: 100px;
+    --section-padding: 30px;
 }
 /* End variabels */
 /* Start Global Rules */
@@ -34,7 +34,7 @@ ul{
 /* Start Components */
 .uni-background{
     background-color: white;
-    height: 100vh;
+    min-height: 100vh;
 }
 .special-heading{
     text-align: center;
@@ -42,8 +42,8 @@ ul{
 .special-heading h2{
     font-size: 40px;
     font-weight: normal;
-    padding-top: 70px;
-    margin: 30px;
+    /* padding-top: 70px; */
+    /* margin: 30px; */
 }
 .special-heading .line{
     display: flex;
@@ -302,6 +302,9 @@ ul a.home{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
+.services .container{
+    padding-bottom: 30px;
+}
 .services .srv{
     display: flex;
 }
@@ -313,7 +316,8 @@ ul a.home{
     }
 }
 .services .srv i{
-    margin-right: 50px;
+    color: var(--main-color);
+    margin-right: 30px;
     font-size: 40px;
 }
 @media (max-width: 767px) {
@@ -334,7 +338,72 @@ ul a.home{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         grid-column-gap: 40px;
-        grid-row-gap: 60px;
+        grid-row-gap: 40px;
     }
 }
 /* End Services Section */
+/* Start Design Section  */
+.design{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-image: url(../images/design-background.jpg);
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.design::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0/15%);
+}
+.design .image,
+.design .text{
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+.design .image{
+    text-align: center;
+    margin: 0 20px;
+}
+@media (max-width: 767px){
+    .design .image{
+        display: none;
+    }
+}
+.design img{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: -91px;
+}
+.design .text{
+        color: white;
+        background-color: var(--transparent-color);
+        padding: 30px;
+    }
+.design .text h2{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.design .text li{
+    padding: 15px 0;
+}
+.design ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\e163";
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+
+    /* End Design Section  */
