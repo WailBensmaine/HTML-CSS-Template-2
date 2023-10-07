@@ -530,7 +530,7 @@ ul a.home{
         top: -35px;
     }
 }
-.video .text a{
+.video .text button{
     color: white;
     background-color: black;
     text-decoration: none;
@@ -560,3 +560,56 @@ ul a.home{
     }
 }
 /* End About Section */
+/* Start Stat Section */
+.stat{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/stat.jfif);
+    background-size: cover;
+}
+.stat .container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.stat .box{
+    color: white;
+    background-color: var(--transparent-color);
+    padding: 50px;
+}
+@media (max-width: 767px){
+    .stat .box{
+        flex-basis: 100%;
+    }
+}
+@media (min-width: 768px){
+    .stat .box{
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 992px){
+    .stat .box{
+        flex-basis: 25%;
+    }
+}
+.stat i{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+}
+.stat h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+.stat p{
+    text-align: center;
+    font-size: 14px;
+}
+/* End Stat Section */
