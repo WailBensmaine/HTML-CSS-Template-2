@@ -541,3 +541,22 @@ ul a.home{
     text-transform: uppercase;
 }
 /* End Vedio Section */
+/* Start About Section */
+.about{
+    padding-top: var(--section-padding);
+    overflow: hidden;
+    text-align: center;
+}
+.about img{
+    position: relative;
+    bottom: -200px;
+    margin-top: -200px;
+    max-width: 100%;
+}
+@media (max-width: 767px){
+    .about img{
+        bottom: -60px;
+        margin-top: -60px;
+    }
+}
+/* End About Section */
