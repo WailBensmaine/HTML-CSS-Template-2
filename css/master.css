@@ -613,3 +613,136 @@ ul a.home{
     font-size: 14px;
 }
 /* End Stat Section */
+/* Start New Section */
+.testim-skills{
+    display: flex;
+    padding: 80px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.testim-skills > div{
+    flex-basis: 45%;
+}
+.testimonia{
+    position: relative;
+    min-width: 50%;
+}
+.testimonia .box{
+    display: flex;
+    margin-bottom: 30px;
+}
+.testimonia .box .image{
+    padding-left: 80px;
+ 
+}
+
+.testimonia .box .image img{
+    width: 60px;
+    border-radius: 50%;
+}
+.testimonia .box .text{
+    margin-left: 80px;
+    background-color: rgb(250, 250, 250);
+}
+.testimonia .box .text p{
+    padding: 10px 20px;
+    color: #777;
+    line-height: 2;
+}
+.testimonia .bullet{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    min-width: 60px;
+    justify-content: space-between;
+}
+.testimonia .bullet li{
+    border: 2px solid gray;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.testimonia ul li.active{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+@media (max-width: 767px) {
+    .testim-skills{
+        display: flex;
+        padding: 80px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .testim-skills > div{
+        flex-basis: 100%;
+    }
+    
+    .special-heading {
+        text-align: center;
+    }
+    .testimonia .box {
+        display: flex;
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .testimonia .box .text{
+        margin-left: 0;
+    }
+    .testimonia .box .image{
+        margin: 20px 0;
+        padding-left: 0;
+    }
+    .testimonia .box .text p {
+        padding: 10px 20px;
+        line-height: 2;
+    }
+    .special-heading h2 {
+        font-size: 30px;
+        font-weight: normal;
+        margin-top: 40px;
+    }
+}
+.skills .skill{
+    margin-bottom: 15px;
+}
+.skills h4{
+    margin-bottom: 10px;
+}
+.skill .level{
+    width: 100%;
+    background-color: rgb(141, 138, 138);
+}
+.skill span{
+    display: block;
+    width: 70%;
+    height: 30px;
+    position: relative;
+    background-color: var(--main-color);
+}
+.skill span::before {
+    content: '70%';
+    position: absolute;
+    top: -40px;
+    left: 250px;
+    width: fit-content;
+    padding: 5px;
+    height: 20px;
+    color: white;
+    background-color: black;
+    /* border: 10px solid black; */
+}
+.skill span::after {
+    content: '';
+    left: 255px;
+    top: -10px;
+    position: absolute;
+    border-width: 15px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+/* End New Section */
