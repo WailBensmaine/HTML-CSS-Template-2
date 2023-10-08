@@ -739,10 +739,58 @@ ul a.home{
 .skill span::after {
     content: '';
     left: 255px;
-    top: -10px;
+    top: -17px;
     position: absolute;
     border-width: 15px;
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
+@media (max-width: 767px) {
+    .skill span::before {
+        content: '70%';
+        position: absolute;
+        top: -40px;
+        left: 134px;
+        width: fit-content;
+        padding: 5px;
+        height: 20px;
+        color: white;
+        background-color: black;
+    }
+    .skill span::after {
+    content: '';
+    left: 139px;
+    top: -17px;
+    position: absolute;
+    border-width: 15px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+}
 /* End New Section */
+/* Start Quote Section */
+.quote {
+    display: flex;
+    min-height: 200px;
+    background-size: cover;
+    background-image: url(../images/quote.jfif);
+}
+.quote .text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 20px 30px;
+}
+.quote .text h2{
+    text-align: center;
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: white;
+}
+.quote .text p{
+    color: white;
+}
+/* End Quote Section */
