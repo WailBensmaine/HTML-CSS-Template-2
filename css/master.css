@@ -641,7 +641,7 @@ ul a.home{
     border-radius: 50%;
 }
 .testimonia .box .text{
-    margin-left: 80px;
+    margin-left: 10%;
     background-color: rgb(250, 250, 250);
 }
 .testimonia .box .text p{
@@ -714,21 +714,21 @@ ul a.home{
     margin-bottom: 10px;
 }
 .skill .level{
+    margin-bottom: 30px;
     width: 100%;
     background-color: rgb(141, 138, 138);
 }
 .skill span{
     display: block;
-    width: 70%;
     height: 30px;
     position: relative;
     background-color: var(--main-color);
 }
 .skill span::before {
-    content: '70%';
+    content: attr(data-percentage);
     position: absolute;
     top: -40px;
-    left: 250px;
+    left: calc(100% - 20px);
     width: fit-content;
     padding: 5px;
     height: 20px;
@@ -738,35 +738,14 @@ ul a.home{
 }
 .skill span::after {
     content: '';
-    left: 255px;
+    left: calc(100% - 15px);
     top: -17px;
     position: absolute;
     border-width: 15px;
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
-@media (max-width: 767px) {
-    .skill span::before {
-        content: '70%';
-        position: absolute;
-        top: -40px;
-        left: 134px;
-        width: fit-content;
-        padding: 5px;
-        height: 20px;
-        color: white;
-        background-color: black;
-    }
-    .skill span::after {
-    content: '';
-    left: 139px;
-    top: -17px;
-    position: absolute;
-    border-width: 15px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}
-}
+
 /* End New Section */
 /* Start Quote Section */
 .quote {
@@ -794,3 +773,70 @@ ul a.home{
     color: white;
 }
 /* End Quote Section */
+/* Start Pricing Section */
+.pricing{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.pricing .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    column-gap: 20px;
+    row-gap: 40px;
+    text-align: center;
+}
+@media (max-width: 767px){
+    .pricing .container{
+        grid-template-columns: repeat(auto-fill, 1fr);
+    }
+}
+.pricing .box{
+    display: flex;
+    flex-direction: column;
+}
+.pricing .box .head{
+    border-top: 1px solid var(--main-color) ;
+    border-bottom: 1px solid var(--main-color) ;
+    padding: 30px;
+    font-size: 40px;
+}
+.pricing .head h2::before{
+    content: '$';
+    font-weight: 500;
+    position: relative;
+    font-size: 25px;
+    top: -42px;
+    left: -10px;
+}
+.pricing .head h2::after{
+    content: '/MO';
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    left: 15px;
+}
+.pricing .box .head p{
+    padding: 0 20px 30px 20px;
+}
+
+.pricing .box > p{
+    margin: 10px auto;
+    padding: 20px;
+    width: fit-content;
+    border-bottom: 1px solid var(--main-color) ;
+}
+
+.pricing .box > p:last-of-type{
+    width: 100px;
+    border-bottom: none ;
+}
+.pricing .box .foot{
+    border-top: 1px solid var(--main-color) ;
+}
+.pricing .box button{
+    margin-top: 30px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid var(--main-color);
+}
+/* End Pricing Section */
